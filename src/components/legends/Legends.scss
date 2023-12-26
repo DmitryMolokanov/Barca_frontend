@@ -1,0 +1,200 @@
+$blueColor: rgb(49, 49, 159);
+$redColor: rgb(173, 54, 54);
+$yellowColor: rgb(253, 197, 44);
+$barsalg: linear-gradient(to right, $redColor, $blueColor);
+%center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter_block_dropdown-filter-container {
+  @extend %center;
+  width: 100%;
+  height: 100px;
+  margin-top: 20px;
+  .dropdown-filter-container {
+    @extend %center;
+    width: 70%;
+    height: 50%;
+    background-color: white;
+    border-radius: 20px;
+    .legend-filter-container {
+      .legend-filter-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: $blueColor;
+        padding: 10px;
+        cursor: pointer;
+      }
+      .legend-filter-list-container {
+        display: block;
+        position: absolute;
+        margin-left: 10px;
+        padding: 0px 10px 0px 10px;
+        background-color: white;
+        border-radius: 5px;
+        z-index: 2;
+        background-color: $blueColor;
+        ul {
+          padding: 0px 10px 0px 10px;
+          color: white;
+          li {
+            font-size: 18px;
+            list-style-type: none;
+            cursor: pointer;
+            &:hover {
+              color: yellow;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.legends-main-field-container {
+  @extend %center;
+  width: 100%;
+  .players-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 70%;
+    height: fit-content;
+    border-radius: 20px;
+    .player-card {
+      position: relative;
+      width: 20%;
+      height: 340px;
+      margin: 20px;
+      box-shadow: 0 0 10px 5px rgb(204, 204, 204);
+      cursor: pointer;
+      &:hover {
+        .player-card-name {
+          height: 100%;
+          bottom: 0;
+        }
+        .player-card-img {
+          img {
+            transform: scale(1.2);
+          }
+        }
+      }
+      .player-card-img {
+        width: 100%;
+        height: 100%;
+
+        img {
+          transition-duration: 1s;
+          transition-delay: 1s;
+          width: 100%;
+          height: 90%;
+        }
+      }
+      .player-card-name {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 10%;
+        background-color: white;
+        text-align: center;
+        z-index: 1;
+        opacity: 0.9;
+        overflow: hidden;
+        transition-duration: 1s;
+        transition-delay: 1.5s;
+        span {
+          color: $blueColor;
+          font-size: 17px;
+          margin-top: 5px;
+          padding: 5px;
+        }
+        .player-name {
+          font-size: 20px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .modal {
+    position: absolute;
+    width: 100%;
+    height: 2500px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    .legend-discription-container {
+      position: fixed;
+      overflow: auto;
+      box-sizing: border-box;
+      left: 13.7%;
+      top: 0;
+      width: 70%;
+      height: fit-content;
+      padding: 10px;
+      text-align: justify;
+      margin: 20px;
+      background-color: white;
+      z-index: 2;
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: linear-gradient(to top, $redColor, $blueColor);
+      }
+
+      .legend-discription-img-container {
+        @extend %center;
+        width: 100%;
+
+        img {
+          width: 60%;
+        }
+      }
+      .legend-discription {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 200px;
+        .legend-discription-name {
+          padding: 10px 0px 10px 0px;
+          text-align: center;
+          font-size: 30px;
+          font-weight: 600;
+          color: transparent;
+          -webkit-background-clip: text;
+          background-clip: text;
+          background-image: linear-gradient(
+            90deg,
+            rgb(205, 18, 45),
+            rgb(21, 66, 132)
+          );
+        }
+        .legend-discription-honors {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          height: fit-content;
+          padding-bottom: 50px;
+          .legend-honor-title {
+            font-size: 20px;
+            padding: 10px;
+            margin-top: 30px;
+            color: $blueColor;
+            font-weight: 600;
+          }
+          .legend-honor {
+            padding: 10px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,168 @@
+$blueColor: rgb(49, 49, 159);
+$redColor: rgb(173, 54, 54);
+$yellowColor: rgb(253, 197, 44);
+$barsalg: linear-gradient(to right, $redColor, $blueColor);
+%center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%buttonsYear {
+  color: white;
+  background-color: transparent;
+  border: 0;
+  width: 100%;
+  padding: 20px 5px 20px 5px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  &:hover {
+    color: $yellowColor;
+  }
+}
+%positionYear {
+  position: absolute;
+  top: 40%;
+  font-size: 4em;
+  font-weight: 900;
+  padding: 20px;
+  color: $yellowColor;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+.top-img {
+  position: relative;
+  width: 100%;
+
+  .since {
+    @extend %center;
+    @extend %positionYear;
+    left: 25%;
+    animation-name: since;
+  }
+  .until-now {
+    @extend %positionYear;
+    right: 25%;
+    animation-name: until-now;
+  }
+  img {
+    width: 100%;
+    z-index: 0;
+    transition: 1s all ease-in-out;
+    animation-name: animation-top-img;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+  }
+}
+@keyframes animation-top-img {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes since {
+  from {
+    left: -15%;
+  }
+  to {
+    left: 25%;
+  }
+}
+@keyframes until-now {
+  from {
+    right: -15%;
+  }
+  to {
+    right: 25%;
+  }
+}
+
+.years-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+  .point-buttons-year-container {
+    width: 100px;
+    height: fit-content;
+    text-align: center;
+    border-bottom: 5px solid $redColor;
+    transition: 0.5s;
+    .buttons-year {
+      @extend %buttonsYear;
+    }
+  }
+  .buttons-year-container {
+    width: 100px;
+    height: fit-content;
+    text-align: center;
+    border-bottom: 5px solid white;
+    .buttons-year {
+      @extend %buttonsYear;
+    }
+  }
+}
+.info-main-container {
+  @extend %center;
+  width: 100%;
+  height: 600px;
+  margin-top: 20px;
+
+  .info-container {
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    border-radius: 15px;
+    .info-header {
+      width: 100%;
+      height: 70px;
+      text-align: center;
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      background-image: linear-gradient(
+        90deg,
+        rgb(21, 66, 132),
+        rgb(205, 18, 45)
+      );
+    }
+    .info-img-text-container {
+      width: 100%;
+      height: 80%;
+      display: flex;
+      .info-img {
+        width: 30%;
+        height: 100%;
+        margin-left: 10px;
+        img {
+          width: 90%;
+        }
+        figcaption {
+          text-align: center;
+          color: $blueColor;
+          font-weight: 600;
+        }
+      }
+      .info-text {
+        width: 70%;
+        padding: 0px 30px 30px 30px;
+        text-align: justify;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+          width: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: linear-gradient(to top, $redColor, $blueColor);
+        }
+      }
+    }
+  }
+}
+.footer {
+  width: 100%;
+  height: 100px;
+}

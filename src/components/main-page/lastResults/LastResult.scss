@@ -1,0 +1,181 @@
+$blueColor: rgb(49, 49, 159);
+$redColor: rgb(173, 54, 54);
+$barsalg: linear-gradient(to right, $redColor, $blueColor);
+%buttonStyle {
+  position: absolute;
+  width: 3%;
+  height: 100%;
+  z-index: 100;
+  opacity: 0.1;
+  background-color: black;
+  color: white;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+%matchConteiners {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 100%;
+  border: 1px solid;
+}
+
+.last-result-container {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background-color: white;
+  border-style: solid;
+  border-top-width: 10px;
+  border-bottom-width: 10px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  overflow: hidden;
+  border-image: linear-gradient(to left, $redColor, $blueColor) 10;
+  animation-name: changeBorderColor;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+  .left {
+    @extend %buttonStyle;
+    left: 0;
+  }
+  .right {
+    @extend %buttonStyle;
+    right: 0;
+  }
+  .carusel {
+    position: absolute;
+    width: 300%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    transition-duration: 1s;
+
+    .match-container {
+      @extend %matchConteiners;
+      .match-date {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        background-color: rgb(45, 45, 145);
+        color: white;
+        .date {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 10%;
+          height: 100%;
+          font-size: 45px;
+        }
+        .day-month {
+          display: flex;
+          flex-direction: column;
+          margin-left: 15px;
+
+          .day {
+            font-size: 20px;
+            font-weight: 600;
+          }
+          .month {
+            font-size: 20px;
+            font-weight: 100;
+            font-style: oblique;
+          }
+        }
+      }
+      .result-container {
+        display: flex;
+
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        .result-liga-title {
+          width: 15%;
+          img {
+            width: 100%;
+          }
+        }
+        .match-score-conteiner {
+          width: 80%;
+          height: 70%;
+
+          .teams-score-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 60%;
+
+            div {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              height: 100%;
+
+              img {
+                width: 70%;
+              }
+              .score {
+                width: 70%;
+                height: 30%;
+
+                .finished {
+                  font-size: 35px;
+                  background-color: rgb(45, 45, 145);
+                  padding: 5px 15px 5px 15px;
+                  color: white;
+                }
+                .future {
+                  font-size: 40px;
+                  font-weight: 600;
+                  color: transparent;
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  background-image: linear-gradient(
+                    90deg,
+                    rgb(205, 18, 45),
+                    rgb(21, 66, 132)
+                  );
+                }
+              }
+            }
+          }
+        }
+        .teams {
+          width: 100%;
+          height: 100px;
+          text-align: center;
+          font-size: 20px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  .other-results {
+    @extend %matchConteiners;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: white;
+      font-size: 25px;
+      background: linear-gradient(45deg, $redColor, $blueColor);
+    }
+  }
+}
+@keyframes changeBorderColor {
+  from {
+    border-image: linear-gradient($redColor, $blueColor) 10;
+  }
+  to {
+    border-image: linear-gradient($blueColor, $redColor) 10;
+  }
+}
