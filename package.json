@@ -29,5 +29,5 @@
     "typescript": "^5.2.2",
     "vite": "^5.0.0"
   },
-  "proxy": "http://localhost:7000"
+  "proxy": "http://5.35.88.50:7000"
 }

@@ -1,0 +1,44 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
+
+  .side-line-animation {
+    width: 30%;
+    border: 3px solid rgb(253, 197, 44);
+    border-radius: 5px;
+    animation-name: logo;
+    animation-duration: 1s;
+  }
+  .side-line {
+    width: 30%;
+    border: 3px solid rgb(253, 197, 44);
+  }
+
+  .block {
+    display: none;
+    width: 100px;
+    height: 100px;
+  }
+  .block-animation {
+    width: 100px;
+    height: 100px;
+
+    .right-line {
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@keyframes logo {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 30%;
+  }
+}

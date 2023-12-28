@@ -9,6 +9,7 @@ import ResultTeam from "../components/results/list-matches/ResultTeam";
 import TimeMatch from "../components/schedule/TimeMatch";
 import Modal from "../components/UI/Modal";
 import ErrReqLimit from "../components/UI/ErrReqLimit";
+import Footer from "../components/UI/Footer";
 
 const Schedule = () => {
   const [schedule, setSchedule] = useState<matches[]>([]);
@@ -16,7 +17,7 @@ const Schedule = () => {
 
   async function getSchedule() {
     try {
-      const response = await fetch("http://localhost:7000/season_schedual");
+      const response = await fetch("http://5.35.88.50:7000/season_schedual");
       const result = await response.json();
       console.log(result);
       setSchedule(result);
@@ -67,6 +68,7 @@ const Schedule = () => {
           })}
         </div>
       </div>
+      <Footer />
       <Modal hiddenModal={hiddenModal} handlerModal={handlerModal}>
         <ErrReqLimit />
       </Modal>

@@ -9,6 +9,7 @@ import DateMatch from "../components/results/list-matches/DateMatch";
 import LogoCompetition from "../components/results/list-matches/LogoCompetition";
 import Modal from "../components/UI/Modal";
 import ErrReqLimit from "../components/UI/ErrReqLimit";
+import Footer from "../components/UI/Footer";
 
 const Results = () => {
   const [season, setSeason] = useState<matches[]>([]);
@@ -16,7 +17,7 @@ const Results = () => {
 
   async function getSeasonResults() {
     try {
-      const response = await fetch("http://localhost:7000/season_results");
+      const response = await fetch("http://5.35.88.50:7000/season_results");
       const result = await response.json();
       setSeason(result.reverse());
     } catch (err) {
@@ -63,6 +64,7 @@ const Results = () => {
           })}
         </div>
       </div>
+      <Footer />
       <Modal hiddenModal={hiddenModal} handlerModal={handlerModal}>
         <ErrReqLimit />
       </Modal>

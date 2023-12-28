@@ -11,6 +11,7 @@ import ScorePlayers from "../components/squad/ScorePlayers";
 import StartSquad from "../components/squad/field/StartSquad";
 import Modal from "../components/UI/Modal";
 import ErrReqLimit from "../components/UI/ErrReqLimit";
+import Footer from "../components/UI/Footer";
 
 const Squad = () => {
   const [squad, setSquad] = useState<squad[]>([]);
@@ -22,7 +23,7 @@ const Squad = () => {
 
   async function getSquad() {
     try {
-      const response = await fetch("http://localhost:7000/squad");
+      const response = await fetch("http://5.35.88.50:7000/squad");
       const result = await response.json();
       setSquad(result.squad);
       setShowPlayerInfo("flex");
@@ -34,7 +35,7 @@ const Squad = () => {
   }
 
   async function getLigaScore() {
-    const response = await fetch("http://localhost:7000/score");
+    const response = await fetch("http://5.35.88.50:7000/score");
     const result = await response.json();
     setLigaScore(result);
   }
