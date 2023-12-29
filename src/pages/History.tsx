@@ -13,7 +13,9 @@ const History = () => {
 
   function showInfo(id: number) {
     const info = hisoryInfo.find((el) => el.id === id);
-    setInfo(info);
+    if (info) {
+      setInfo(info);
+    } else return;
   }
 
   return (

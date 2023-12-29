@@ -58,10 +58,12 @@ const Squad = () => {
     <div>
       <Header />
       <div className="player-list-container">
-        <positionCardPlayer.Provider value={{ setPlayerInfoLeft }}>
+        <positionCardPlayer.Provider
+          value={{ playerInfoLeft, setPlayerInfoLeft }}
+        >
           <TablePlayers players={squad} playerInfo={getPlayerInfo} />
           <PlayerInfoCard
-            player={player}
+            player={player!}
             position={playerInfoLeft}
             showCard={showPlayerInfo}
           />

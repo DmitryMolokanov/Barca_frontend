@@ -1,11 +1,11 @@
 import { FC } from "react";
-import { playerInfo, squad } from "../interface/interface";
+import { squad } from "../interface/interface";
 import { getplayerAge } from "../../utils/date/getPlayersAge";
 import { playersInfo } from "./playersInfo";
 import { compareId } from "../../utils/compareId";
 interface TablePlayersProps {
   players: squad[];
-  playerInfo: (info: playerInfo) => void;
+  playerInfo: (info: any) => void;
 }
 
 const TablePlayers: FC<TablePlayersProps> = ({ players, playerInfo }) => {
@@ -13,9 +13,12 @@ const TablePlayers: FC<TablePlayersProps> = ({ players, playerInfo }) => {
     const info = playersInfo.find((player) => {
       return player.id === id;
     });
-    playerInfo(info);
+    if (info) {
+      playerInfo(info);
+    }
   }
-  function showPlayer(currId: number, allId: playerInfo[]) {
+
+  function showPlayer(currId: number, allId: any[]) {
     if (!compareId(currId, allId)) return;
     getPlayerInfo(currId);
   }

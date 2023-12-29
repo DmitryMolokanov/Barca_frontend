@@ -8,7 +8,7 @@ const ErrReqLimit = () => {
       setInterval(() => {
         setCounter(counter - 1);
       }, 1000);
-    return () => clearInterval(timer);
+    if (timer) return () => clearInterval(timer);
   }, [counter]);
   return (
     <div className="req-limit-container">
