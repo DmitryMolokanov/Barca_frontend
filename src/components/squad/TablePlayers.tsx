@@ -15,7 +15,7 @@ const TablePlayers: FC<TablePlayersProps> = ({ players, playerInfo }) => {
     });
     playerInfo(info);
   }
-  function showPlayer(currId: number, allId: playerInfo) {
+  function showPlayer(currId: number, allId: playerInfo[]) {
     if (!compareId(currId, allId)) return;
     getPlayerInfo(currId);
   }

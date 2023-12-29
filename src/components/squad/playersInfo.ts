@@ -1,5 +1,3 @@
-import { playerInfo } from "../interface/interface";
-
 export const playersInfo = [
   {
     id: 3173,

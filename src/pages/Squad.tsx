@@ -11,7 +11,6 @@ import ScorePlayers from "../components/squad/ScorePlayers";
 import StartSquad from "../components/squad/field/StartSquad";
 import Modal from "../components/UI/Modal";
 import ErrReqLimit from "../components/UI/ErrReqLimit";
-import Footer from "../components/UI/Footer";
 
 const Squad = () => {
   const [squad, setSquad] = useState<squad[]>([]);
