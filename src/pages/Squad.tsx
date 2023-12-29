@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Header from "../components/main-page/header/Header";
-import "../components/squad/squad.scss";
+import "../components/squad/Squad.scss";
 import { squad } from "../components/interface/interface";
 import { IligaScore } from "../components/interface/interface";
 import { playerInfo } from "../components/interface/interface";
