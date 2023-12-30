@@ -31,7 +31,7 @@ const Standings = () => {
 
   async function getData() {
     try {
-      const response = await fetch("http://5.35.88.50:7000/standings");
+      const response = await fetch("https://5.35.88.50:7000/standings");
       const result = await response.json();
       setStandings(result.standings[0].table);
     } catch (err) {
