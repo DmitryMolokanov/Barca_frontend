@@ -12,7 +12,9 @@ const LastResults = () => {
   const [closeMatces, setCloseMatches] = useState([]);
 
   async function getCloseMatches() {
-    const response = await fetch("https://5.35.88.50:7000/last_matches");
+    const response = await fetch(
+      "https://barca-server-myapp.ru:7000/last_matches"
+    );
     const result = await response.json();
 
     setCloseMatches(result);
