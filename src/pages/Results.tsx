@@ -14,7 +14,6 @@ import Footer from "../components/UI/Footer";
 const Results = () => {
   const [season, setSeason] = useState<matches[]>([]);
   const [hiddenModal, setHiddenModal] = useState<boolean>(true);
-
   async function getSeasonResults() {
     try {
       const response = await fetch("https://5.35.88.50:7000/season_results");

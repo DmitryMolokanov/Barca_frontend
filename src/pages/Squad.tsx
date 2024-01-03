@@ -34,7 +34,7 @@ const Squad = () => {
   }
 
   async function getLigaScore() {
-    const response = await fetch("http://5.35.88.50:7000/score");
+    const response = await fetch("https://5.35.88.50:7000/score");
     const result = await response.json();
     setLigaScore(result);
   }
