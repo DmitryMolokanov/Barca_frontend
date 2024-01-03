@@ -17,7 +17,7 @@ const Schedule = () => {
 
   async function getSchedule() {
     try {
-      const response = await fetch("http://5.35.88.50:7000/season_schedual");
+      const response = await fetch("https://5.35.88.50:7000/season_schedual");
       const result = await response.json();
       console.log(result);
       setSchedule(result);

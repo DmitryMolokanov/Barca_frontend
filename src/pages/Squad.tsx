@@ -22,7 +22,7 @@ const Squad = () => {
 
   async function getSquad() {
     try {
-      const response = await fetch("http://5.35.88.50:7000/squad");
+      const response = await fetch("https://5.35.88.50:7000/squad");
       const result = await response.json();
       setSquad(result.squad);
       setShowPlayerInfo("flex");
