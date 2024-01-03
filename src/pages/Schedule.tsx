@@ -17,7 +17,9 @@ const Schedule = () => {
 
   async function getSchedule() {
     try {
-      const response = await fetch("https://5.35.88.50:7000/season_schedual");
+      const response = await fetch(
+        "https://barca-server-myapp.ru:7000/season_schedual"
+      );
       const result = await response.json();
       console.log(result);
       setSchedule(result);

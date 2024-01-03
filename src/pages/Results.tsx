@@ -16,7 +16,9 @@ const Results = () => {
   const [hiddenModal, setHiddenModal] = useState<boolean>(true);
   async function getSeasonResults() {
     try {
-      const response = await fetch("https://5.35.88.50:7000/season_results");
+      const response = await fetch(
+        "https://barca-server-myapp.ru:7000/season_results"
+      );
       const result = await response.json();
       setSeason(result.reverse());
     } catch (err) {
