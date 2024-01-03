@@ -18,7 +18,7 @@ const Results = () => {
   async function getSeasonResults() {
     try {
       const response = await fetch(
-        "http://barca-server-myapp.ru/season_results"
+        "https://barca-server-myapp.ru/season_results"
       );
       const result = await response.json();
       setSeason(result.reverse());
