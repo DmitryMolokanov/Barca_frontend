@@ -17,7 +17,9 @@ const Results = () => {
 
   async function getSeasonResults() {
     try {
-      const response = await fetch("https://5.35.88.50:7000/season_results");
+      const response = await fetch(
+        "https://http://barca-server-myapp.ru/season_results"
+      );
       const result = await response.json();
       setSeason(result.reverse());
     } catch (err) {
