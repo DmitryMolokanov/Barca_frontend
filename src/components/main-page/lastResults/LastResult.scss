@@ -88,7 +88,6 @@ $barsalg: linear-gradient(to right, $redColor, $blueColor);
       }
       .result-container {
         display: flex;
-
         align-items: center;
         flex-direction: column;
         width: 100%;
@@ -177,5 +176,29 @@ $barsalg: linear-gradient(to right, $redColor, $blueColor);
   }
   to {
     border-image: linear-gradient($blueColor, $redColor) 10;
+  }
+}
+
+@media (max-width: 500px) {
+  .last-result-container {
+    .carusel {
+      width: 2000px;
+      .match-container {
+        .result-container {
+          width: 445px;
+        }
+      }
+      .match-container {
+        .match-date {
+          justify-content: center;
+        }
+      }
+      .left {
+        width: 10%;
+      }
+      .right {
+        width: 10%;
+      }
+    }
   }
 }

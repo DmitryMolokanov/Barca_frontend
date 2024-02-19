@@ -24,12 +24,19 @@ const LastResults = () => {
   }, []);
 
   function shiftLeft() {
-    const newPosition = position + 1000;
+    let newPosition;
+    if (window.innerWidth < 500) {
+      newPosition = position + 445;
+    } else newPosition = position + 1000;
+
     if (newPosition > 0) return;
     setPosition(newPosition);
   }
   function shiftRight() {
-    const newPosition = position - 1000;
+    let newPosition;
+    if (window.innerWidth < 500) {
+      newPosition = position - 445;
+    } else newPosition = position - 1000;
     if (newPosition < -2000) return;
     setPosition(newPosition);
   }

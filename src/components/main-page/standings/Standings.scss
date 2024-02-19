@@ -89,3 +89,35 @@
     border-radius: 10px;
   }
 }
+
+@media (max-width: 500px) {
+  .team-container {
+    thead {
+      tr {
+        .playedGames,
+        .goalsFor,
+        .goalsAgainst,
+        .goalDifference {
+          display: none;
+        }
+      }
+    }
+    tbody {
+      tr {
+        .playedGames,
+        .goalsFor,
+        .goalsAgainst,
+        .goalDifference {
+          display: none;
+        }
+      }
+    }
+  }
+  .standings-container {
+    .team-container {
+      .team-logo {
+        margin: 0;
+      }
+    }
+  }
+}

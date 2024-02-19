@@ -10,7 +10,7 @@ $barsalg: linear-gradient(to right, $redColor, $blueColor);
   background: $barsalg;
 
   .logo-conteiner {
-    width: 100px;
+    width: 7%;
     margin-left: 5%;
     .logo {
       width: 100%;
@@ -18,7 +18,7 @@ $barsalg: linear-gradient(to right, $redColor, $blueColor);
   }
   .container-list-container {
     display: flex;
-    margin-left: 10%;
+    margin-left: 5%;
     .header-list-container {
       position: relative;
       background-color: white;
@@ -51,6 +51,23 @@ $barsalg: linear-gradient(to right, $redColor, $blueColor);
             color: rgb(253, 249, 44);
           }
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    .logo-conteiner {
+      width: 20%;
+    }
+    .container-list-container {
+      .header-list-container {
+        padding: 10px;
+        font-size: 16px;
+      }
+      .menu-lust {
+        left: -30px;
       }
     }
   }

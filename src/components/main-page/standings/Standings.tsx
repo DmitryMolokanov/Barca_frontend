@@ -58,16 +58,16 @@ const Standings = () => {
         <thead>
           <tr>
             <th>Position</th>
-            <th></th>
+            <th className="empty-th"></th>
             <th>Team</th>
             <th>Points</th>
-            <th>Matches played</th>
+            <th className="playedGames">Matches played</th>
             <th>Wins</th>
             <th>Draws</th>
             <th>Losses</th>
-            <th>Goals for</th>
-            <th>Goals against</th>
-            <th>Goals difference</th>
+            <th className="goalsFor">Goals for</th>
+            <th className="goalsAgainst">Goals against</th>
+            <th className="goalDifference">Goals difference</th>
           </tr>
         </thead>
         <tbody>
@@ -85,13 +85,13 @@ const Standings = () => {
                 </td>
                 <td style={{ fontWeight: 600 }}>{el.team.shortName}</td>
                 <td style={{ fontWeight: 600 }}>{el.points}</td>
-                <td>{el.playedGames}</td>
+                <td className="playedGames">{el.playedGames}</td>
                 <td>{el.won}</td>
                 <td>{el.draw}</td>
                 <td>{el.lost}</td>
-                <td>{el.goalsFor}</td>
-                <td>{el.goalsAgainst}</td>
-                <td>{el.goalDifference}</td>
+                <td className="goalsFor">{el.goalsFor}</td>
+                <td className="goalsAgainst">{el.goalsAgainst}</td>
+                <td className="goalDifference">{el.goalDifference}</td>
               </tr>
             );
           })}

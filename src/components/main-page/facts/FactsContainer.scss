@@ -60,3 +60,20 @@ $barsalg: linear-gradient(to right, $redColor, $blueColor);
     left: 4%;
   }
 }
+@media (max-width: 500px) {
+  .facts-container {
+    margin-top: 0;
+    .fact {
+      display: block;
+      .facts-img {
+        display: none;
+      }
+    }
+    .fact-discription {
+      span {
+        float: left;
+        font-size: 14px;
+      }
+    }
+  }
+}

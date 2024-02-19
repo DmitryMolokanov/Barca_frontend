@@ -146,7 +146,7 @@ $barsalg: linear-gradient(to right, $redColor, $blueColor);
         width: 10px;
       }
       &::-webkit-scrollbar-thumb {
-        background: linear-gradient(to top, $redColor, $blueColor);
+        background: red;
       }
 
       .legend-discription-img-container {
