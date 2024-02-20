@@ -198,3 +198,45 @@ $barsalg: linear-gradient(to right, $redColor, $blueColor);
     }
   }
 }
+
+@media (max-width: 500px) {
+  .legends-main-field-container {
+    .players-list {
+      width: 100%;
+      .player-card {
+        height: 115px;
+        .player-card-img {
+        }
+        .player-card-name {
+          display: block;
+          position: relative;
+          height: 40px;
+          font-size: 14px;
+          transition: none;
+          span {
+            display: none;
+          }
+          .player-name {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 0;
+            margin: 0;
+            height: 50px;
+            padding-top: 10px;
+          }
+        }
+      }
+    }
+  }
+  .legends-main-field-container {
+    .modal {
+      .legend-discription-container {
+        .legend-discription {
+          height: 70vh;
+          padding-bottom: 50px;
+        }
+      }
+    }
+  }
+}
