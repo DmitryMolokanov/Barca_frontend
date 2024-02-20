@@ -233,3 +233,86 @@ $barsalg: linear-gradient(to right, $redColor, $blueColor);
     }
   }
 }
+
+@media (max-width: 500px) {
+  .trophy-field {
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 5px;
+    .trophy-leftside-container {
+      display: flex;
+      justify-content: space-around;
+      margin: 0;
+      width: 100%;
+      .leftside {
+        width: 30%;
+        border: 0;
+        .trophy-qty {
+          font-size: 16px;
+        }
+        .trophy-name {
+          font-size: 16px;
+        }
+      }
+    }
+    .trophy-main-container {
+      width: 90%;
+      margin-top: 20px;
+      border: 0;
+      .select-conteiner {
+        .select-cups {
+          width: 49%;
+          select {
+            font-size: 16px;
+          }
+        }
+        .select-years {
+          width: 49%;
+          .input-season-years {
+            font-size: 16px;
+          }
+        }
+      }
+      .trophy-info-select {
+        .trophy-info-years {
+          span {
+            text-align: center;
+          }
+          width: 100%;
+        }
+      }
+      .season-trophy-container {
+        .each-trophy-conteiner {
+          display: flex;
+          align-items: flex-end;
+          .each-trophy-block {
+            .each-trophy-title {
+              display: block;
+              width: 100%;
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+    .trophy-rightside-container {
+      display: flex;
+      justify-content: space-around;
+      margin: 0;
+      width: 100%;
+      .rightside {
+        width: 30%;
+        border: 0;
+        .trophy-qty {
+          font-size: 16px;
+        }
+        .trophy-name {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
