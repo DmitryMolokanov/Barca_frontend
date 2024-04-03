@@ -182,3 +182,42 @@ $barsalg: linear-gradient(to right, $redColor, $blueColor);
     }
   }
 }
+
+@media (max-width: 500px) {
+  .last-match {
+    .competition-logo {
+      width: 10%;
+    }
+    .date-container {
+      span {
+        font-size: 20px;
+      }
+    }
+    .matches-container {
+      align-items: flex-start;
+
+      .team {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+
+        .logo {
+          width: 50%;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 10px;
+        }
+        span {
+          font-size: 18px;
+          font-weight: 500;
+        }
+      }
+      .score-container {
+        height: 100px;
+        div {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
