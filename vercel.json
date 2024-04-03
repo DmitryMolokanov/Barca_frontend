@@ -1,8 +1,3 @@
 {
-  "rewrites": [
-    {
-      "source": "/https://barca-server-myapp.ru:7000/last_matches",
-      "destination": "https://barca-server-myapp.ru:7000/last_matches"
-    }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
